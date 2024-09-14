@@ -1,0 +1,39 @@
+/* Color Variables */
+:root {
+  --primary-color: #003366;
+  /* Dark blue for main elements */
+  --secondary-color: #719871;
+  /* Muted green for accents */
+  --hover-color: #0056b3;
+  /* Light blue for hover effects */
+  --active-color: #004085;
+  /* Dark blue for active states */
+  --background-color: #f4f4f4;
+  /* Light background color */
+  --text-color: #fff;
+  /* White text color */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  /* Shadow color */
+}
+
+/* Common Button Styles */
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.button:active {
+  background-color: var(--active-color);
+  transform: scale(0.95);
+}
