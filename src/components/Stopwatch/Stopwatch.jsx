@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from "react";
+import TimerDisplay from "./TimerDisplay";
+import FinalTimeDisplay from "./FinalTimeDisplay";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -61,20 +63,13 @@ const Stopwatch = () => {
     setIsPaused(false);
   }, []);
 
-  const formatTime = (time) => {
-    const milliseconds = `0${(time % 1000) / 10}`.slice(-2);
-    const seconds = `0${Math.floor((time / 1000) % 60)}`.slice(-2);
-    const minutes = `0${Math.floor((time / 60000) % 60)}`.slice(-2);
-    return `${minutes}:${seconds}:${milliseconds}`;
-  };
-
   return (
     <div className="stopwatch">
       <div className="stopwatch-card">
         <h1 className="stopwatch-title">Stopwatch</h1>
-        <div className="timer">{formatTime(time)}</div>
+        <TimerDisplay time={time} />
         {finalTime !== null && !isRunning && (
-          <div className="final-time">Final Time: {formatTime(finalTime)}</div>
+          <FinalTimeDisplay finalTime={finalTime} />
         )}
         <div className="buttons">
           {!isRunning && !isPaused && (

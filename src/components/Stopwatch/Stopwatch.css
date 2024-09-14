@@ -10,7 +10,8 @@
 }
 
 .stopwatch-card {
-  min-width: 500px;
+  flex-basis: 80%;
+  max-width: 500px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px var(--shadow-color);
