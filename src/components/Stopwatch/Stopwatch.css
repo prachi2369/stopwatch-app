@@ -1,0 +1,81 @@
+@import '../../common.css';
+
+/* Centering the stopwatch container */
+.stopwatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.stopwatch-card {
+  flex-basis: 80%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Styling for the header */
+.stopwatch-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+/* Timer styling */
+.timer {
+  min-width: 200px;
+  font-size: 3rem;
+  margin: 20px;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  padding: 10px 40px;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Styling for the final time display */
+.final-time {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Use common button styles */
+.stopwatch-button {
+  margin-bottom: 25px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.stopwatch-button:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.stopwatch-button:active {
+  background-color: var(--active-color);
+  transform: scale(0.95);
+}
